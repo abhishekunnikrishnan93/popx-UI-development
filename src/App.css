@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  font-family: Arial, sans-serif;
+}
+
+.mobile-screen {
+  width: 375px;
+  height: 812px;
+  background: #f7f8f9;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+/* Welcome Screen */
+
+.welcome-content {
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  right: 25px;
+}
+
+.welcome-content h1 {
+  font-size: 32px;
+  color: #1d2226;
+  margin-bottom: 12px;
+}
+
+.welcome-content p {
+  color: #8c8c8c;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.create-btn {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 6px;
+  background: #6c25ff;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 6px;
+  background: #cebafb;
+  color: #1d2226;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Login Screen */
+
+.login-content {
+  padding: 40px 20px;
+}
+
+.login-content h1 {
+  font-size: 34px;
+  color: #1d2226;
+  margin-bottom: 15px;
+}
+
+.login-content p {
+  color: #8c8c8c;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  background: #f7f8f9;
+  padding: 0 4px;
+  font-size: 13px;
+  color: #8c52ff;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.signin-btn {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 6px;
+  background: #cbcbcb;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.register-content {
+  height: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-content h1 {
+  font-size: 34px;
+  color: #1d2226;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  background: #f7f8f9;
+  padding: 0 5px;
+  color: #8c52ff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.agency-section {
+  margin-top: 5px;
+}
+
+.agency-section p {
+  font-size: 14px;
+  color: #1d2226;
+  font-weight: 600;
+}
+
+.agency-section span {
+  color: red;
+}
+
+.radio-group {
+  display: flex;
+  gap: 25px;
+  margin-top: 12px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: #6c25ff;
+  width: 18px;
+  height: 18px;
+}
+
+.register-btn {
+  margin-top: auto;
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 6px;
+  background: #6c25ff;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Account Settings Screen */
+
+.settings-header {
+  background: #ffffff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  border-bottom: 1px solid #ececec;
+}
+
+.settings-header h2 {
+  font-size: 20px;
+  color: #1d2226;
+}
+
+.profile-card {
+  background: #ffffff;
+  padding: 20px 15px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-image-wrapper {
+  position: relative;
+}
+
+.profile-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.camera-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #6c25ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+}
+
+.profile-info h3 {
+  font-size: 18px;
+  color: #1d2226;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  color: #444;
+  font-size: 14px;
+}
+
+.profile-description {
+  margin-top: 20px;
+  line-height: 1.7;
+  font-size: 14px;
+  color: #555;
+}
+
+.dashed-line {
+  border-bottom: 2px dashed #e0e0e0;
+  margin-top: 15px;
+}
