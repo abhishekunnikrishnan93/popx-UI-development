@@ -4,11 +4,7 @@ A modern React-based implementation of the PopX mobile onboarding flow, built as
 
 ## Live Demo
 
-🔗 Add your deployed Vercel URL here
-
-Example:
-
-https://popx-ui-development.vercel.app
+https://popx-ui-development.vercel.app/
 
 ---
 
