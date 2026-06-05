@@ -25,7 +25,7 @@ function Register() {
   const handleSubmit = () => {
     const { fullName, phone, email, password } = formData;
 
-    // Required fields check
+    // Required fields validation
     if (!fullName || !phone || !email || !password) {
       alert("Please fill all required fields.");
       return;
@@ -48,6 +48,18 @@ function Register() {
       alert("Password must be at least 6 characters long.");
       return;
     }
+
+    // Save user data
+    const userData = {
+      fullName,
+      phone,
+      email,
+      password,
+      company: formData.company,
+      agency,
+    };
+
+    localStorage.setItem("user", JSON.stringify(userData));
 
     navigate("/settings");
   };

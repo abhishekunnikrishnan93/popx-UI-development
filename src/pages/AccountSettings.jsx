@@ -1,6 +1,8 @@
 import "../App.css";
 
 function AccountSettings() {
+  const user = JSON.parse(localStorage.getItem("user"));
+
   return (
     <div className="mobile-screen">
       <div className="settings-header">
@@ -19,15 +21,27 @@ function AccountSettings() {
           </div>
 
           <div>
-            <h3>Marry Doe</h3>
-            <p>Marry@Gmail.Com</p>
+            <h3>{user?.fullName || "User Name"}</h3>
+            <p>{user?.email || "user@email.com"}</p>
+
+            {user?.company && (
+              <p
+                style={{
+                  fontSize: "12px",
+                  color: "#666",
+                  marginTop: "4px",
+                }}
+              >
+                {user.company}
+              </p>
+            )}
           </div>
         </div>
 
         <p className="profile-description">
           Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr,
           Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et
-          Dolore Magna Aliquyam Erat, Sed Diam
+          Dolore Magna Aliquyam Erat, Sed Diam.
         </p>
       </div>
 
