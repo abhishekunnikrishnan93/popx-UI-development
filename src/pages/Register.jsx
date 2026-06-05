@@ -4,9 +4,51 @@ import "../App.css";
 
 function Register() {
   const navigate = useNavigate();
+
   const [agency, setAgency] = useState("yes");
 
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    password: "",
+    company: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
   const handleSubmit = () => {
+    const { fullName, phone, email, password } = formData;
+
+    // Required fields check
+    if (!fullName || !phone || !email || !password) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    // Phone validation
+    if (!/^\d{10}$/.test(phone)) {
+      alert("Phone number must contain exactly 10 digits.");
+      return;
+    }
+
+    // Email validation
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Password validation
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      return;
+    }
+
     navigate("/settings");
   };
 
@@ -23,7 +65,10 @@ function Register() {
           <label>Full Name*</label>
           <input
             type="text"
+            name="fullName"
             placeholder="Marry Doe"
+            value={formData.fullName}
+            onChange={handleChange}
           />
         </div>
 
@@ -31,7 +76,10 @@ function Register() {
           <label>Phone number*</label>
           <input
             type="text"
-            placeholder="Marry Doe"
+            name="phone"
+            placeholder="9876543210"
+            value={formData.phone}
+            onChange={handleChange}
           />
         </div>
 
@@ -39,7 +87,10 @@ function Register() {
           <label>Email address*</label>
           <input
             type="email"
-            placeholder="Marry Doe"
+            name="email"
+            placeholder="marry@gmail.com"
+            value={formData.email}
+            onChange={handleChange}
           />
         </div>
 
@@ -47,7 +98,10 @@ function Register() {
           <label>Password*</label>
           <input
             type="password"
-            placeholder="Marry Doe"
+            name="password"
+            placeholder="Enter Password"
+            value={formData.password}
+            onChange={handleChange}
           />
         </div>
 
@@ -55,7 +109,10 @@ function Register() {
           <label>Company name</label>
           <input
             type="text"
-            placeholder="Marry Doe"
+            name="company"
+            placeholder="Company Name"
+            value={formData.company}
+            onChange={handleChange}
           />
         </div>
 
